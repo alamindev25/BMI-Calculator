@@ -9,14 +9,14 @@ def bmi_calculator(request):
         feet = float(request.POST.get('feet'))
         inch = float(request.POST.get('inch'))
 
-        # ফুট + ইঞ্চি থেকে মিটারে কনভার্ট করা
+        
         total_inches = (feet * 12) + inch
         height = total_inches * 2.54 / 100  # convert to meters
 
-        # BMI হিসাব
+        
         bmi = weight / (height ** 2)
 
-        # BMI ক্যাটাগরি
+        
         if bmi < 18.5:
             category = "Underweight"
         elif 18.5 <= bmi < 24.9:
